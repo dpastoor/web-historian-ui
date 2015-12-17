@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './css/styles.css'
+import './css/styles.css';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +13,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-
-

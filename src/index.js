@@ -5,4 +5,4 @@ import App from './App.jsx'
 
 
 
-render(<App name="React" />, document.getElementById('root'));
+render(<App name="web-historian" />, document.getElementById('root'));

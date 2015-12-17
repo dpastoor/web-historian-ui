@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './css/styles.css';
+import SubmitField from './components/submit-site.jsx';
+import {AppBar} from 'material-ui'
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +9,8 @@ export default class App extends React.Component {
   render() {
     return (
        <div className="App">
-       <h1>hello from {this.props.name}</h1>
+         <AppBar title="search the archive:" />
+         <SubmitField />
        </div>
     );
   }

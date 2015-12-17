@@ -17,7 +17,7 @@ export default class SubmitField extends React.Component {
             padding: 30
             }}>
                 <TextField
-                       hintText="type your message here"
+                       hintText="What site would you like to see?"
                        style={{
                     width: '100%',
                     borderColor: '#D0D0D0',

@@ -12,20 +12,22 @@ export default class SiteList extends React.Component {
       });
         return (
             <Card style={{
-                flexGrow: 1,
-                minWidth: '10vw',
-                overflowY: 'auto'
+              flexGrow: 1,
+              minWidth: '10vw',
+              overflowY: 'auto'
             }}>
-                <List>
-                       <div style={{
-                    color: 'black',
-                    fontSize: 20,
-                    textAlign: 'center'
-                       }}>
-                           Site List
-                       </div>
-                       {sites}
-                </List>
+              <List>
+                <div
+                  style={{
+                  color: 'black',
+                  fontSize: 20,
+                  textAlign: 'center'
+                  }}
+                >
+                  Site List
+                </div>
+                  {sites}
+              </List>
             </Card>
         )
     }

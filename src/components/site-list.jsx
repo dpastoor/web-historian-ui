@@ -7,8 +7,12 @@ export default class SiteList extends React.Component {
     }
 
     render() {
-      let sites = _.map(this.props.sites, (site) => {
-        return <ListItem> {site} </ListItem>;
+      let sites = _.map(this.props.sites, (site, siteName) => {
+        console.log("--siteName--")
+        console.log(siteName)
+        console.log("--sites--")
+        console.log(site)
+        return <ListItem> {siteName} </ListItem>;
       });
         return (
             <Card style={{

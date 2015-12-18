@@ -9,8 +9,9 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      siteObject: {},
       html: "",
-      sites: ["google", "costco", "walmart"]
+      sites: {}
       }
   }
   _onSubmit(event) {
@@ -19,13 +20,12 @@ export default class App extends React.Component {
       url:'http://localhost:3001/' + messageText,
       json: true
     }, (err, req, body) => {
-      console.log("----body----");
-      console.log(typeof body);
-      console.log("----body.html----");
-      console.log(body.html);
          if (typeof body === 'object') {
+          let siteState = this.state.sites;
+          siteState[body.site]= body.site;
            this.setState({
-             html: body.html
+             html: body.html,
+             sites: siteState
            });
          } else {
            this.setState({

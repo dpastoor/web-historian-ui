@@ -6,6 +6,8 @@ export default class SiteHtml extends React.Component {
     }
 
     render() {
+      let renderedHTML = (this.props.html === "") ? "" :
+      <div dangerouslySetInnerHTML={{__html: this.props.html}} />
         return (
             <Card style={{
                 flexGrow: 3,
@@ -19,7 +21,7 @@ export default class SiteHtml extends React.Component {
                     textAlign: 'center'
                        }}>
                        </div>
-                       Sites HTML will go here
+                       {renderedHTML}
                 </List>
             </Card>
         )

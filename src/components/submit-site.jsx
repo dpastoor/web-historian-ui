@@ -1,13 +1,10 @@
 import React from 'react';
 import mui, {Card, TextField} from 'material-ui';
+import xhr from 'xhr'
 export default class SubmitField extends React.Component {
     constructor(props) {
         super(props);
-    }
-    _onSubmit(event) {
-        let messageText = event.target.value;
-        console.log(messageText);
-        event.target.value = "";
+        this.state = {html: ""};
     }
     render() {
         return (
@@ -30,7 +27,7 @@ export default class SubmitField extends React.Component {
                     // highlighted while you type
                     outline: 'auto 0px'
                 }}
-                onEnterKeyDown={this._onSubmit.bind(this)}
+                onEnterKeyDown={this.props.onsubmit}
                 />
             </Card>
         )

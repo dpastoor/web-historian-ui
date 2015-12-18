@@ -54,6 +54,8 @@
     "material-ui": "^0.13.4",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-tap-event-plugin": "^0.2.1"
+    "react-tap-event-plugin": "^0.2.1",
+    "url": "^0.11.0",
+    "xhr": "^2.2.0"
   }
 }

@@ -8,7 +8,10 @@ import {AppBar} from 'material-ui'
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {html: ""}
+    this.state = {
+      html: "",
+      sites: ["google", "costco", "walmart"]
+      }
   }
   _onSubmit(event) {
     let messageText = event.target.value;
@@ -46,7 +49,7 @@ export default class App extends React.Component {
               width: '100%',
               margin: '30px auto 30px'
               }}>
-         <SiteList />
+         <SiteList sites={this.state.sites} />
          <SiteHtml html={this.state.html} />
        </div>
        </div>

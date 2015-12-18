@@ -1,10 +1,9 @@
 import React from 'react';
 import mui, {Card, TextField} from 'material-ui';
-import xhr from 'xhr'
+import xhr from 'xhr';
 export default class SubmitField extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {html: ""};
     }
     render() {
         return (

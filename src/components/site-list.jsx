@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import mui, {Card, List } from 'material-ui'
-
+import _ from 'lodash';
+import mui, {Card, List, ListItem} from 'material-ui'
 export default class SiteList extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
+      let sites = _.map(this.props.sites, (site) => {
+        return <ListItem> {site} </ListItem>;
+      });
         return (
             <Card style={{
                 flexGrow: 1,
@@ -21,7 +24,7 @@ export default class SiteList extends React.Component {
                        }}>
                            Site List
                        </div>
-                       Sites will go here
+                       {sites}
                 </List>
             </Card>
         )
